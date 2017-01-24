@@ -1,0 +1,100 @@
+################################################################
+#                        Java snippets                        #
+################################################################
+# Templates
+
+snippet header_dfki
+/***************************************************************
+ * Copyright (c) 2009 - 2013, DFKI, All rights reserved.
+ ***************************************************************/
+endsnippet
+snippet class_desc 
+
+/**
+ * 
+ * ${1:description here!}
+ * 
+ * @author Johannes Lahann <johannes.lahann@dfki.de>
+ */
+ $0
+endsnippet
+
+snippet header
+/**
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *
+ *
+ *     @license ${1:Apache License 2.0}
+ *     @company ${2:Institut für Wirtschaftinformatik}
+ *     @project ${3:Serene}
+ *     @author  Johannes Lahann
+ *
+ */
+endsnippet
+
+snippet date
+`!p snip.rv=vim.eval("expand(\"%:p:h\")")`
+endsnippet
+
+snippet package
+package `!p 
+
+def find_between( s, first, last ):
+    try:
+        start = s.index( first ) + len( first )
+        end = s.index( last, start )
+        return s[start:end]
+    except ValueError:
+        return s
+
+snip.rv = find_between(vim.eval("expand('%:p')"),"java/","/"+fn).replace("/",".")
+`
+$0
+endsnippet
+
+snippet class "class" b
+public class `!v expand("%:t:r")` {
+  $0
+}
+endsnippet
+
+snippet interface "interface" b
+public interface `!v expand("%:t:r")` {
+  $0
+}
+endsnippet
+snippet cons "constructor" b
+public  `!v expand("%:t:r")`($1) {
+  $0
+}
+endsnippet
+
+snippet func "procedure" b
+${1:public} ${2:void} ${3:foo}($4) {
+  $0
+}
+endsnippet
+
+snippet getter "getter" n
+public ${1:String} get${2:Name}(){
+  return ${3:value};
+}
+endsnippet
+
+snippet setter "setter" n
+public void set${1:Name}(${2:String} ${3:value}){
+  this.$3=$3;
+}
+endsnippet

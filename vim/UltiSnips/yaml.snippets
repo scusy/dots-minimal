@@ -1,0 +1,14 @@
+snippet mux "Mux template" b
+# ~/.tmuxinator/mlpipe-config.yml
+
+name: mlpipe-engine
+root: ~/data/versioning/gitlab/JohannesLahann/master/mlpipe/engine
+
+tmux_options: -2
+pre_window: alias cdr="cd $(pwd)"
+windows:
+  - vim: 
+    - v 
+  - shell:
+  - sbt:
+endsnippet

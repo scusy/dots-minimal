@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/johannes/data/vim-20.4.2015'
+let g:netrw_dirhist_2='/home/johannes/.cache/vim-logs'
+let g:netrw_dirhist_3='/home/johannes/data/versioning/serene/branches/score/score_projectmanagement/test'
+let g:netrw_dirhist_4='/home/johannes/data/versioning/serene/branches/score/score_projectmanagement/app'
+let g:netrw_dirhist_5='/home/johannes/data/versioning/serene/branches/kommit/KommitSereneRestLib2'
+let g:netrw_dirhist_6='/'
+let g:netrw_dirhist_7='/home/johannes/docker/predictionIO-test/source'
